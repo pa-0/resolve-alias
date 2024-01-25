@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:resolve-alias}",
+            "name": "Debug resolve-alias",
+            "program": "${workspaceFolder:resolve-alias}/.build/debug/resolve-alias",
+            "preLaunchTask": "swift: Build Debug resolve-alias"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:resolve-alias}",
+            "name": "Release resolve-alias",
+            "program": "${workspaceFolder:resolve-alias}/.build/release/resolve-alias",
+            "preLaunchTask": "swift: Build Release resolve-alias"
+        }
+    ]
+}
