@@ -3,9 +3,9 @@
 
 name: Swift
 permissions: write-all
-env:
-  GITHUB_TOKEN: ${{env.GITHUB_TOKEN}}
-  GH_WS: ${{github.WORKSPACE}}
+  env:
+    GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    GH_WS: ${{github.WORKSPACE}}
 on:
   workflow_dispatch:
 #  push:
@@ -22,5 +22,5 @@ jobs:
       run: make
     - name: Create Release
       run: |
-        gh release create 1.0 "${GITHUB_WORSKPACE}/.build/release/" -t "resolve-alias"
+        gh release create 1.0 "${GW_WS}/.build/release/" -t "resolve-alias"
       
