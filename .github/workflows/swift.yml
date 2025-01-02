@@ -20,6 +20,6 @@ jobs:
       shell: pwsh
       run: |
         $rel = ".build/release"
-        zip -r $rel "resolve-alias.zip"
+        zip -r "resolve-alias.zip" $rel
         gh release create 1.0 "resolve-alias.zip" -t "resolve-alias"
       
