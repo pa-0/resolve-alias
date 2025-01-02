@@ -17,6 +17,7 @@ jobs:
     - name: Build
       run: make
     - name: Create Release
+      shell: pwsh
       run: |
         $rel = ".build/release"
         zip -r $rel "resolve-alias.zip"
