@@ -18,5 +18,7 @@ jobs:
       run: make
     - name: Create Release
       run: |
-        gh release create 1.0 ".build/release/" -t "resolve-alias"
+        $rel = ".build/release"
+        zip -r $rel "resolve-alias.zip"
+        gh release create 1.0 "resolve-alias.zip" -t "resolve-alias"
       
